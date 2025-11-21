@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeakFit - Physical Training</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{--accent:#ff6b6b; --dark:#0f1724}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#222}
+    .hero{background:linear-gradient(120deg, rgba(15,23,36,0.9), rgba(255,107,107,0.85)), url('https://images.unsplash.com/photo-1554284126-aa88f22d8d9b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c7c2c8d1c12b7a0b1c3e8f6b6b8b9d6') center/cover no-repeat; color:white}
+    .card-trainer img{height:220px; object-fit:cover}
+    .feature-icon{width:56px;height:56px;border-radius:12px;background:#fff3f3;display:flex;align-items:center;justify-content:center}
+    .accent{color:var(--accent)}
+    .btn-accent{background:var(--accent);border:0}
+    footer{background:#0b1220;color:#cbd5e1}
+    .schedule-table td, .schedule-table th{vertical-align:middle}
+    @media (max-width:767px){ .card-trainer img{height:180px} }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-lightning-fill me-2" viewBox="0 0 16 16"><path d="M11.3 1L1 10h4.5L5 15l10.3-9H11.3L11.3 1z"/></svg>
+      <strong>PeakFit</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#trainers">Trainers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-outline-light ms-3" href="#contact">Book Trial</a>
+    </div>
+  </div>
+</nav>
+
+
+<header id="home" class="hero py-6">
+  <div class="container py-6">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-white">
+        <h1 class="display-5 fw-bold">Train harder. Recover smarter. Move better.</h1>
+        <p class="lead mt-3">Personalized physical training plans, group classes, and expert coaches to help you reach peak performance — whether you're just starting or training for the next big event.</p>
+        <div class="mt-4">
+          <a href="#classes" class="btn btn-accent btn-lg me-2">View Classes</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Book Free Session</a>
+        </div>
+        <ul class="list-unstyled d-flex gap-3 mt-4">
+          <li><small class="text-muted">⭐ 4.9 (1.2k+ reviews)</small></li>
+          <li><small class="text-muted">📍 Downtown • Open 6 AM — 10 PM</small></li>
+        </ul>
+      </div>
+      <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
+        <div class="card shadow-lg">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f4f4f1e2b1a9f4a6c3e8c5b" class="card-img-top" alt="training">
+          <div class="card-body">
+            <h5 class="card-title">Start your transformation</h5>
+            <p class="card-text">Get a tailored training plan after a free consultation with our coaches.</p>
+            <a href="#contact" class="btn btn-sm btn-accent">Get Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="p-4 border rounded h-100">
+          <div class="feature-icon mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ff6b6b" viewBox="0 0 16 16"><path d="M8 0a2 2 0 0 0-2 2v6H3l5 8 5-8H10V2a2 2 0 0 0-2-2z"/></svg></div>
+          <h5>Personal Coaching</h5>
+          <p class="mb-0">1-on-1 sessions with certified strength & conditioning coaches.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded h-100">
+          <div class="feature-icon mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ff6b6b" viewBox="0 0 16 16"><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.5 3.5l1.5 1.5M10 10l1.5 1.5M3.5 12.5l1.5-1.5M10 6l1.5-1.5"/></svg></div>
+          <h5>Functional Training</h5>
+          <p class="mb-0">Mobility, core, and movement-based sessions that transfer to real life.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded h-100">
+          <div class="feature-icon mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ff6b6b" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/></svg></div>
+          <h5>Recovery & Nutrition</h5>
+          <p class="mb-0">Guided recovery, mobility sessions and nutrition plans to fuel progress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="classes" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h3">Our Classes</h2>
+      <div>
+        <select id="classFilter" class="form-select form-select-sm">
+          <option value="all">All</option>
+          <option value="strength">Strength</option>
+          <option value="hiit">HIIT</option>
+          <option value="mobility">Mobility</option>
+          <option value="endurance">Endurance</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row g-4" id="classesGrid">
+      
+      <div class="col-md-6 col-lg-4 class-card" data-type="strength">
+        <div class="card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1546484959-f5cbf7b4d3f8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=adf4f1b" class="card-img-top" alt="strength">
+          <div class="card-body">
+            <h5 class="card-title">Strength & Conditioning</h5>
+            <p class="card-text">Build power, technique and resilience with progressive programming.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">60 min • All levels</span>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#planModal" data-title="Strength & Conditioning">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 class-card" data-type="hiit">
+        <div class="card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1526403224742-5f2f8d5d5b1d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=bb2d5a" class="card-img-top" alt="hiit">
+          <div class="card-body">
+            <h5 class="card-title">HIIT Blast</h5>
+            <p class="card-text">Fast-paced intervals to burn calories and boost conditioning.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">45 min • Intermediate</span>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#planModal" data-title="HIIT Blast">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 class-card" data-type="mobility">
+        <div class="card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001d9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=ef1c4d" class="card-img-top" alt="mobility">
+          <div class="card-body">
+            <h5 class="card-title">Mobility & Recovery</h5>
+            <p class="card-text">Guided mobility flows and foam rolling for better movement.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">50 min • All levels</span>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#planModal" data-title="Mobility & Recovery">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 class-card" data-type="endurance">
+        <div class="card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1526403224747-3b2f1b8d6b0a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=cc3d2a" class="card-img-top" alt="endurance">
+          <div class="card-body">
+            <h5 class="card-title">Endurance Circuit</h5>
+            <p class="card-text">Sustained efforts and circuits to build aerobic capacity.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-muted">55 min • Intermediate</span>
+              <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#planModal" data-title="Endurance Circuit">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="trainers" class="py-5">
+  <div class="container">
+    <h2 class="h3 mb-4">Meet our Coaches</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-trainer h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-51Azh-nKpj2-p-ICcs-HMLaBpEOB7G4O3_nvJfyl5af4lWLmtb2loA6ixxxMQoLbqiw&usqp=CAU" class="card-img-top" alt="coach">
+          <div class="card-body">
+            <h5 class="card-title">Bhuvanesh<small class="text-muted">• Head Coach</small></h5>
+            <p class="card-text">Specialist in strength training and athlete development. Certified CSCS.</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-sm btn-outline-secondary">View Profile</a>
+              <a class="btn btn-sm btn-accent text-white" href="#contact">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-trainer h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKeNyjz7nilr0g-ukXUkQ7uPP8EAQTVbl_-A&s" class="card-img-top" alt="coach">
+          <div class="card-body">
+            <h5 class="card-title">Bharath Chary <small class="text-muted">• Mobility Coach</small></h5>
+            <p class="card-text">Focuses on movement quality, injury prevention and rehab.</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-sm btn-outline-secondary">View Profile</a>
+              <a class="btn btn-sm btn-accent text-white" href="#contact">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card card-trainer h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi9hSBe5Zkrz0adu31yTLrGcyYS6T9FppiEg&s" class="card-img-top" alt="coach">
+          <div class="card-body">
+            <h5 class="card-title">Naveen<small class="text-muted">• HIIT & Conditioning</small></h5>
+            <p class="card-text">High-energy coach who builds fun, effective sessions for all levels.</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-sm btn-outline-secondary">View Profile</a>
+              <a class="btn btn-sm btn-accent text-white" href="#contact">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="schedule" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h3">Weekly Schedule</h2>
+      <div>
+        <button class="btn btn-sm btn-outline-secondary" id="downloadSchedule">Download PDF</button>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped schedule-table">
+        <thead>
+          <tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>6:00 — 7:00</th><td>Mobility</td><td>Strength</td><td>Mobility</td><td>Strength</td><td>HIIT</td><td>Endurance</td><td>Open Gym</td></tr>
+          <tr><th>7:30 — 8:30</th><td>Strength</td><td>HIIT</td><td>Strength</td><td>Mobility</td><td>Strength</td><td>HIIT</td><td>Open Gym</td></tr>
+          <tr><th>18:00 — 19:00</th><td>HIIT</td><td>Endurance</td><td>HIIT</td><td>Strength</td><td>Mobility</td><td>Specialty</td><td>Restorative</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h2 class="h3">Get in touch</h2>
+        <p>Book a free trial session or ask about our membership plans. We'll respond within 24 hours.</p>
+        <ul class="list-unstyled">
+          <li>📞 +91 98765 43210</li>
+          <li>📧 hello@peakfit.example</li>
+          <li>📍 42 Fitness St, Downtown</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <form id="contactForm" class="card p-3 shadow-sm">
+          <div class="mb-2"><input class="form-control" id="name" placeholder="Your name" required></div>
+          <div class="mb-2"><input class="form-control" id="email" type="email" placeholder="Email" required></div>
+          <div class="mb-2"><input class="form-control" id="phone" type="tel" placeholder="Phone (optional)"></div>
+          <div class="mb-2"><select class="form-select" id="interest"><option>Free Trial</option><option>Membership</option><option>Personal Coaching</option></select></div>
+          <div class="mb-2"><textarea class="form-control" id="message" rows="3" placeholder="Message (optional)"></textarea></div>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">We will never share your information.</small>
+            <button class="btn btn-accent text-white" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="py-4 mt-4">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>© <strong>PeakFit</strong> 2025</div>
+    <div>
+      <a class="text-muted me-3">Privacy</a>
+      <a class="text-muted">Terms</a>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal fade" id="planModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Class</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p id="modalDesc">Class description goes here.</p>
+        <ul id="modalBullets"></ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <a class="btn btn-accent text-white" href="#contact">Book Trial</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  
+  document.querySelectorAll('a.nav-link').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      const target=document.querySelector(a.getAttribute('href'));
+      if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+    })
+  })
+
+  
+  document.getElementById('classFilter').addEventListener('change', e=>{
+    const val=e.target.value; document.querySelectorAll('.class-card').forEach(card=>{
+      card.style.display = (val==='all' || card.dataset.type===val) ? '' : 'none';
+    })
+  })
+
+  const planModal = document.getElementById('planModal');
+  planModal.addEventListener('show.bs.modal', function (event) {
+    const btn = event.relatedTarget; const title = btn.getAttribute('data-title');
+    planModal.querySelector('.modal-title').textContent = title;
+    const descMap = {
+      'Strength & Conditioning':'Progressive strength sessions with technique coaching, barbell work, and accessory movements.',
+      'HIIT Blast':'Interval-based metabolic conditioning designed to increase fitness and burn calories rapidly.',
+      'Mobility & Recovery':'Breathe, move and unlock tight positions — includes guided foam-rolling and stretching.',
+      'Endurance Circuit':'Circuits and longer intervals to build aerobic capacity and muscular stamina.'
+    };
+    planModal.querySelector('#modalDesc').textContent = descMap[title] || 'A great class to improve fitness.';
+    const bullets = ['Warm-up • Technique • Main set • Cool-down'];
+    const ul = planModal.querySelector('#modalBullets'); ul.innerHTML=''; bullets.forEach(b=>{const li=document.createElement('li');li.textContent=b;ul.appendChild(li);});
+  })
+
+  
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value || 'Friend';
+    this.querySelector('button').disabled=true;
+    this.querySelector('button').textContent='Sending...';
+    setTimeout(()=>{
+      alert('Thanks '+name+' — we received your message and will reach out soon!');
+      document.getElementById('contactForm').reset();
+      this.querySelector('button').disabled=false;
+      this.querySelector('button').textContent='Send';
+    },800);
+  })
+
+ 
+  document.getElementById('downloadSchedule').addEventListener('click', ()=>{
+    const rows = [...document.querySelectorAll('.schedule-table tr')].map(r=>[...r.querySelectorAll('th,td')].map(cell=>'"'+cell.textContent.trim()+'"').join(','));
+    const csv = rows.join('\n'); const blob = new Blob([csv],{type:'text/csv'});
+    const url = URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='peakfit_schedule.csv'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  })
+</script>
+</body>
+</html>
